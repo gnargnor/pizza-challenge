@@ -1,8 +1,8 @@
 <div class="contianer-fluid">
-  <div ng-controller="OrderController">
+  <div ng-controller="OrderController as order">
   <form>
     <span>Size: </span>
-    <select class="form-control" ng-model="pizza.size">
+    <select class="form-control" ng-model="order.orderedPizza.size">
       <option>Small</option>
       <option>Medium</option>
       <option>Large</option>
@@ -10,7 +10,7 @@
     </select>
 
     <span>Choose Topping: </span>
-    <select class="form-control" ng-model="pizza.toppings">
+    <select class="form-control" ng-model="order.orderedPizza.toppings">
       <option>Cheese</option>
       <option>Pepperoni</option>
       <option>Canadian Bacon</option>
@@ -19,6 +19,6 @@
       <option>Supreme</option>
     </select>
 
-    <button ng-click="orderPizza(pizza)">Submit</button>
+    <button ng-click="order.orderPizza(order.orderedPizza)">Submit</button>
   </form>
 </div>
