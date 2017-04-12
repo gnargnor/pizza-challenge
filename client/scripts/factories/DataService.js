@@ -7,7 +7,9 @@ myApp.factory('DataService', function(){
   };
   //This adds the pizza to the orderedArray
   var orderPizza = function(thisPizza){
-    orderedPizzas.orderedArray.push(thisPizza);
+    var newPizza = angular.copy(thisPizza);
+    orderedPizzas.orderedArray.push(newPizza);
+    orderedPizza = {};
   };
 
   //No equivalent to orderedPizza above because we will ng-repeat on Checkout page
