@@ -1,3 +1,51 @@
-<p>
-  Checkout Page
-</p>
+<div class="container-fluid" ng-controller="CheckoutController as checkout">
+  <h2>
+    Checkout Page
+  </h2>
+  <br>
+  <h3>Cart</h3>
+  <!-- repeat pizzas in pizzaArray nestled inside of our pizzaCart -->
+  <table class="table table-striped ordered">
+    <tr>
+      <th>Size</th>
+      <th>Toppings</th>
+      <th>Confirm/Delete</th>
+    </tr>
+    <tr ng-repeat="pizza in checkout.orderedPizzas.orderedArray">
+<!-- size -->
+      <td>{{pizza.size}}</td>
+<!-- toppings -->
+      <td>{{pizza.toppings}}<td>
+<!-- buttons -->
+      <td>
+          <button class="btn btn-sm btn-default" ng-click="removePizza(pizza)">Delete</button>
+          <button class="btn btn-sm btn-default" ng-click="confirmPizza(pizza)">Confirm</button>
+      </td>
+    </tr>
+  </table>
+
+  <br>
+  <br>
+
+  <h3>Confirmed</h3>
+  <table class="table table-striped confirmed">
+    <tr>
+      <th>Size</th>
+      <th>Toppings</th>
+      <th>Confirm/Delete</th>
+    </tr>
+    <tr ng-repeat="pizza in checkout.confirmedPizzas.confirmedArray">
+<!-- size -->
+      <td>{{pizza.size}}</td>
+<!-- toppings -->
+      <td>{{pizza.toppings}}<td>
+<!-- buttons -->
+      <td>
+        <p>
+          <button class="btn btn-sm btn-default" ng-click="deletePizza($index)">Delete</button>
+          <button class="btn btn-sm btn-default" ng-click="confirmPizza($index)">Confirm</button>
+        </p>
+      </td>
+    </tr>
+  </table>
+</div>
