@@ -9,17 +9,19 @@
     <tr>
       <th>Size</th>
       <th>Toppings</th>
-      <th>Confirm/Delete</th>
+      <th>Are you sure?</th>
     </tr>
     <tr ng-repeat="pizza in checkout.orderedPizzas.orderedArray">
 <!-- size -->
       <td>{{pizza.size}}</td>
 <!-- toppings -->
-      <td>{{pizza.toppings}}<td>
+      <td>{{pizza.toppings}}</td>
 <!-- buttons -->
       <td>
-          <button class="btn btn-sm btn-default" ng-click="checkout.removePizza(pizza)">Delete</button>
-          <button class="btn btn-sm btn-default" ng-click="checkout.confirmPizza(pizza, $index)">Confirm</button>
+          <span>
+            <button class="btn btn-sm btn-default" ng-click="checkout.removePizza(pizza)">Delete</button>
+            <button class="btn btn-sm btn-default" ng-click="checkout.confirmPizza(pizza, $index)">Confirm</button>
+          </span>
       </td>
     </tr>
   </table>
@@ -32,20 +34,12 @@
     <tr>
       <th>Size</th>
       <th>Toppings</th>
-      <th>Confirm/Delete</th>
     </tr>
     <tr ng-repeat="pizza in checkout.confirmedPizzas.confirmedArray">
 <!-- size -->
       <td>{{pizza.size}}</td>
 <!-- toppings -->
       <td>{{pizza.toppings}}<td>
-<!-- buttons -->
-      <td>
-        <p>
-          <button class="btn btn-sm btn-default" ng-click="checkout.deletePizza($index)">Delete</button>
-          <button class="btn btn-sm btn-default" ng-click="checkout.confirmPizza($index)">Confirm</button>
-        </p>
-      </td>
     </tr>
   </table>
 </div>
