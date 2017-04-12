@@ -9,13 +9,13 @@
     <tr>
       <th>Size</th>
       <th>Toppings</th>
-      <th>Confirm/Delete</th>
+      <th>Are you sure?</th>
     </tr>
     <tr ng-repeat="pizza in checkout.orderedPizzas.orderedArray">
 <!-- size -->
       <td>{{pizza.size}}</td>
 <!-- toppings -->
-      <td>{{pizza.toppings}}<td>
+      <td>{{pizza.toppings}}</td>
 <!-- buttons -->
       <td>
           <span>
@@ -34,7 +34,6 @@
     <tr>
       <th>Size</th>
       <th>Toppings</th>
-      <th>Confirm/Delete</th>
     </tr>
     <tr ng-repeat="pizza in checkout.confirmedPizzas.confirmedArray">
 <!-- size -->
