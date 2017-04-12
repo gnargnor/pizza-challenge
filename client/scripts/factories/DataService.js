@@ -7,7 +7,9 @@ myApp.factory('DataService', function(){
   };
   //This adds the pizza to the orderedArray
   var orderPizza = function(thisPizza){
-    orderedPizzas.orderedArray.push(thisPizza);
+    var newPizza = angular.copy(thisPizza);
+    orderedPizzas.orderedArray.push(newPizza);
+    orderedPizza = {};
   };
 
   //No equivalent to orderedPizza above because we will ng-repeat on Checkout page
@@ -17,8 +19,9 @@ myApp.factory('DataService', function(){
     confirmedArray : []
   };
   //This adds the pizzas to the confirmedArray
-  var confirmPizza = function(thisPizza){
+  var confirmPizza = function(thisPizza, $index){
     confirmedPizzas.confirmedArray.push(thisPizza);
+    orderedPizzas.orderedArray.splice($index, 1);
   };
 
   //Not confident this will work...
