@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
-  <head>
-    <meta charset="utf-8">
-    <title>Chi MEAN</title>
+<head>
+  <meta charset="utf-8">
+  <title>Papa Chi's Pizza</title>
 
-    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.css" />
-    <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="styles/style.css" />
 
-    <script type="text/javascript" src="vendors/angular/angular.min.js"></script>
-    <script type="text/javascript" src="vendors/angular-route/angular-route.min.js"></script>
-    <script type="text/javascript" src="scripts/client.min.js"></script>
+  <script type="text/javascript" src="vendors/angular/angular.min.js"></script>
+  <script type="text/javascript" src="vendors/angular-route/angular-route.min.js"></script>
+  <script type="text/javascript" src="scripts/client.min.js"></script>
 
-  </head>
-  <body>
-    <!-- NAV BAR -->
-    <div ng-include="'views/partials/nav.html'"></div>
+</head>
+<body>
+  <!-- NAV BAR -->
+  <div class="container-fluid" id="container">
+    <div class = "row">
+      <div class = "col-md-12">
+        <div ng-include="'views/partials/header.html'"></div>
+        <div ng-include="'views/partials/nav.html'"></div>
+      </div>
+    </div>
 
-    <!-- MAIN CONTENT -->
-    <main ng-view></main>
+    <div class = "row">
+      <div class = "col-md-10 content-container">
+        <!-- MAIN CONTENT -->
+        <main ng-view></main>
 
-    
+      </div>
+    </div>
   </body>
-</html>
+  </html>

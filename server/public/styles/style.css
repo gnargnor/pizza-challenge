@@ -1,4 +1,16 @@
-.diner-nav > ul > li {
-  width: 100px;
-  display: inline-block;
+.content-container {
+  float: none;
+  margin: 0 auto;
+  background-color: white;
+  min-height: 600px;
+}
+
+#container {
+  background-color: salmon;
+}
+
+#header {
+  /*background-color: black;
+  color: white;*/
+  text-align: center;
 }

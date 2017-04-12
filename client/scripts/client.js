@@ -2,27 +2,17 @@ var myApp = angular.module('myApp', ['ngRoute']);
 
 myApp.config(['$routeProvider', function($routeProvider){
     $routeProvider
-        .when('/home', {
-            templateUrl : 'views/templates/home.html',
-            controller: 'HomeController',
-            controllerAs: 'home'
+        .when('/order', {
+            templateUrl : 'views/templates/order.html',
+            controller: 'OrderController',
+            controllerAs: 'order'
         })
-        .when('/blog', {
-            templateUrl : 'views/templates/blog.html',
-            controller: 'BlogController',
-            controllerAs: 'blog'
-        })
-        .when('/menu', {
-            templateUrl : 'views/templates/menu.html',
-            controller: 'MenuController',
-            controllerAs: 'menu'
-        })
-        .when('/contact', {
-            templateUrl : 'views/templates/contact.html',
-            controller: 'ContactController',
-            controllerAs: 'contact'
+        .when('/checkout', {
+            templateUrl : 'views/templates/checkout.html',
+            controller: 'CheckoutController',
+            controllerAs: 'checkout'
         })
         .otherwise({
-            redirectTo: 'home'
+            redirectTo: 'order'
         });
 }]);
