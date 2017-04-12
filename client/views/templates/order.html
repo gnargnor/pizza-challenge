@@ -10,6 +10,7 @@
     </select>
 
     <span>Choose Topping: </span>
+
     <select class="form-control" ng-model="order.orderedPizza.toppings">
       <option>Cheese</option>
       <option>Pepperoni</option>
@@ -19,6 +20,6 @@
       <option>Supreme</option>
     </select>
 
-    <button ng-click="order.orderPizza(order.orderedPizza)">Submit</button>
+    <button ng-click="order.orderPizza(order.orderedPizza); clearForm()">Submit</button>
   </form>
 </div>
