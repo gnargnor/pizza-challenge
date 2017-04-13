@@ -12,6 +12,7 @@ myApp.controller('OrderController', ['DataService', function(DataService){
     'Supreme',
   ];
 
+
   order.clearForm = function(){
     order.orderedPizza.size = '';
   };

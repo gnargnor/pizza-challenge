@@ -11,26 +11,6 @@
 
     <span>Choose Topping: </span>
 
-    <!-- <label class="form-control" ng-model="order.orderedPizza.toppings">
-      <label class="checkbox-inline">
-      <input type = "checkbox" checklist-model="order.orderedPizza.toppings" value = "cheese">Cheese
-      </label>
-      <label class="checkbox-inline">
-      <input type = "checkbox" checklist-model="order.orderedPizza.toppings" value = "pepperoni">Pepperoni
-      </label>
-      <label class="checkbox-inline">
-      <input type = "checkbox" checklist-model="order.orderedPizza.toppings" value = "canadianBacon">Canadian Bacon
-      </label>
-      <label class="checkbox-inline">
-      <input type = "checkbox" checklist-model="order.orderedPizza.toppings"value = "sausage">Sausage
-      </label>
-      <label class="checkbox-inline">
-      <input type = "checkbox" checklist-model="order.orderedPizza.toppings" value = "hawaiian">Hawaiian
-      </label>
-      <label class="checkbox-inline">
-      <input type = "checkbox" checklist-model="order.orderedPizza.toppings" value = "supreme">Supreme
-      </label>
-    </select> -->
 
     <label ng-repeat = "toppings in order.orderedPizza.toppings">
       <input type="checkbox" checklist-model="order.orderedPizza.toppings" checklist-value="topping"> {{toppings}}
