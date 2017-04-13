@@ -2,6 +2,7 @@
   <div ng-controller="OrderController">
   <form>
     <span>Size: </span>
+<<<<<<< Updated upstream
     <select class="form-control" ng-model="pizza.size">
       <option>Small</option>
       <option>Medium</option>
@@ -17,6 +18,36 @@
       <option>Sausage</option>
       <option>Hawaiian</option>
       <option>Supreme</option>
+=======
+    <select class="form-control" ng-model="order.orderedPizza.size">
+      <option value="small">Small</option>
+      <option value="medium">Medium $9</option>
+      <option value="large">Large $10</option>
+      <option value="extraLarge">Extra Large $11</option>
+    </select>
+
+    <span>Choose Topping: </span>
+
+    <label class="form-control" ng-model="order.orderedPizza.toppings">
+      <label class="checkbox-inline">
+      <input type = "checkbox" value = "cheese">Cheese
+      </label>
+      <label class="checkbox-inline">
+      <input type = "checkbox" value = "pepperoni">Pepperoni
+      </label>
+      <label class="checkbox-inline">
+      <input type = "checkbox" value = "canadianBacon">Canadian Bacon
+      </label>
+      <label class="checkbox-inline">
+      <input type = "checkbox" value = "sausage">Sausage
+      </label>
+      <label class="checkbox-inline">
+      <input type = "checkbox" value = "hawaiian">Hawaiian
+      </label>
+      <label class="checkbox-inline">
+      <input type = "checkbox" value = "supreme">Supreme
+      </label>
+>>>>>>> Stashed changes
     </select>
 
     <button ng-click="orderPizza(pizza)">Submit</button>
