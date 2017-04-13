@@ -5,6 +5,14 @@
   min-height: 600px;
 }
 
+h1 {
+  font-family: 'Diplomata SC', cursive;
+}
+
+h2 {
+  font-family: 'Diplomata SC', cursive;
+}
+
 #container {
   background-color: salmon;
 }
