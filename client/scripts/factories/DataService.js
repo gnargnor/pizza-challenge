@@ -53,6 +53,15 @@ myApp.factory('DataService', function(){
     orderedPizza.price = orderedPizza.price + checkedElms;
   };
 
+  var totalPrice = 0;
+  var calculateTotal = function(){
+    for (var i = 0; i < confirmedPizzas.confirmedArray.length; i++) {
+      if(confirmedPizzas.confirmedArray[i].price){
+        totalPrice = totalPrice + confirmedPizzas.confirmedArray[i].price;
+      }
+    }
+  };
+
 //RETURNS
   return {
     orderedPizza : orderedPizza,
@@ -63,6 +72,9 @@ myApp.factory('DataService', function(){
     confirmedPizzas : confirmedPizzas,
     confirmPizza : confirmPizza,
 
-    removePizza : removePizza
+    removePizza : removePizza,
+
+    totalPrice : totalPrice,
+    calculateTotal : calculateTotal
   };
 });
