@@ -50,9 +50,8 @@ myApp.factory('DataService', function(){
       orderedPizza.price = 100;
     }
     var form = document.forms[0]; // your form element (whatever)
-    var checkedElms = form.querySelectorAll(':checked').length;
+    var checkedElms = (form.querySelectorAll(':checked').length -1);
     orderedPizza.price = orderedPizza.price + checkedElms;
-    console.log(orderedPizza.price);
     var unCheck = function()
     {
       for (var i = 0; i < form.length; i++)  {
