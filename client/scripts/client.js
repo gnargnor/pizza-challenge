@@ -12,6 +12,11 @@ myApp.config(['$routeProvider', function($routeProvider){
             controller: 'CheckoutController',
             controllerAs: 'checkout'
         })
+        .when('/confirmation', {
+          templateUrl : 'views/templates/confirmation.html',
+          controller : 'ConfirmationController',
+          controllerAs : 'confirmation'
+        })
         .otherwise({
             redirectTo: 'order'
         });
