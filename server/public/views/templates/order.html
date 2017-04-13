@@ -2,7 +2,7 @@
   <div ng-controller="OrderController as order">
   <form>
     <span>Size: </span>
-    <select class="form-control" ng-model="order.orderedPizza.size">
+    <select class="form-control" ng-model="orderedPizza.size">
       <option value="Small">Small $8</option>
       <option value="Medium">Medium $9</option>
       <option value="Large">Large $10</option>
@@ -14,24 +14,24 @@
 
 
     <label>
-      <input type="checkbox" ng-model="toppings.cheese"> Cheese
+      <input type="checkbox" ng-model="orderedPizza.toppings.cheese"> Cheese
     </label>
     <label>
-      <input type="checkbox" ng-model="toppings.pepperoni"> pepperoni
+      <input type="checkbox" ng-model="orderedPizza.toppings.pepperoni"> pepperoni
     </label>
     <label>
-      <input type="checkbox" ng-model="toppings.canadianBacon"> Canadian Bacon
+      <input type="checkbox" ng-model="orderedPizza.toppings.canadianBacon"> Canadian Bacon
     </label>
     <label>
-      <input type="checkbox" ng-model="toppings.sausage"> Sausage
+      <input type="checkbox" ng-model="orderedPizza.toppings.sausage"> Sausage
     </label>
     <label>
-      <input type="checkbox" ng-model="toppings.hawaiian"> Hawaiian
+      <input type="checkbox" ng-model="orderedPizza.toppings.hawaiian"> Hawaiian
     </label>
     <label>
-      <input type="checkbox" ng-model="toppings.supreme"> Supreme
+      <input type="checkbox" ng-model="orderedPizza.toppings.supreme"> Supreme
     </label>
 
-    <button ng-click="order.addToPizzaToppings(toppings); order.calculatePrice(order.orderedPizza.size); order.orderPizza(order.orderedPizza); order.clearForm(); ">Submit</button>
+    <button ng-click="order.addToPizzaToppings(orderedPizza); order.clearForm(); ">Submit</button>
   </form>
 </div>
