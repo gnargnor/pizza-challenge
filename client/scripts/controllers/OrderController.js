@@ -22,6 +22,14 @@ myApp.controller('OrderController', ['DataService', function(DataService){
 
   order.clearForm = function(){
     order.orderedPizza.size = '';
+    order.addedToppings = [];
+    order.orderedPizza.toppings.cheese = false;
+    order.orderedPizza.toppings.pepperoni = false;
+    order.orderedPizza.toppings.canadianBacon = false;
+    order.orderedPizza.toppings.sausage = false;
+    order.orderedPizza.toppings.hawaiian = false;
+    order.orderedPizza.toppings.supreme = false;
+
   };
 
   order.calculatePrice = DataService.calculatePrice;
