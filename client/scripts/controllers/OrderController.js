@@ -3,28 +3,20 @@ myApp.controller('OrderController', ['DataService', function(DataService){
   order.orderedPizza = DataService.orderedPizza;
   order.orderPizza = DataService.orderPizza;
 
-  order.clearForm = function(){
-    order.orderedPizza.size = '';
-    order.orderedPizza.toppings = [
-      'Cheese',
-      'Pepperoni',
-      'Canadian Bacon',
-      'Sausage',
-      'Hawaiin',
-      'Supreme',
-    ];
-};
   order.orderedPizza.toppings = [
-    'cheese',
-    'pepperoni',
+    'Cheese',
+    'Pepperoni',
     'Canadian Bacon',
     'Sausage',
     'Hawaiin',
     'Supreme',
   ];
 
-    order.uncheckAll = function() {
+  order.clearForm = function(){
+    order.orderedPizza.size = '';
+    order.orderedPizza = [
+    ];
+};
 
- };
 
 }]);
