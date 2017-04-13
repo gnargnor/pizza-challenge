@@ -12,10 +12,26 @@
     <span>Choose Topping: </span>
 
 
-    <label ng-repeat = "toppings in order.orderedPizza.toppings">
-      <input type="checkbox" checklist-model="order.orderedPizza.toppings" checklist-value="topping"> {{toppings}}
+
+    <label>
+      <input type="checkbox" ng-model="toppings.cheese"> Cheese
+    </label>
+    <label>
+      <input type="checkbox" ng-model="toppings.pepperoni"> pepperoni
+    </label>
+    <label>
+      <input type="checkbox" ng-model="toppings.canadianBacon"> Canadian Bacon
+    </label>
+    <label>
+      <input type="checkbox" ng-model="toppings.sausage"> Sausage
+    </label>
+    <label>
+      <input type="checkbox" ng-model="toppings.hawaiian"> Hawaiian
+    </label>
+    <label>
+      <input type="checkbox" ng-model="toppings.supreme"> Supreme
     </label>
 
-    <button ng-click="order.calculatePrice(order.orderedPizza.size); order.orderPizza(order.orderedPizza); order.clearForm()">Submit</button>
+    <button ng-click="order.addToPizzaToppings(toppings); order.calculatePrice(order.orderedPizza.size); order.orderPizza(order.orderedPizza); order.clearForm(); ">Submit</button>
   </form>
 </div>

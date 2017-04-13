@@ -13,6 +13,13 @@ myApp.controller('OrderController', ['DataService', function(DataService){
   ];
 
 
+  order.addedToppings = [];
+
+  order.addToPizzaToppings = function (toppings) {
+    console.log(toppings);
+    order.addedToppings.push(toppings);
+  };
+
   order.clearForm = function(){
     order.orderedPizza.size = '';
   };
