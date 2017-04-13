@@ -3,7 +3,7 @@ myApp.controller('OrderController', ['DataService', function(DataService){
   order.orderedPizza = DataService.orderedPizza;
   order.orderPizza = DataService.orderPizza;
 
-  order.orderedPizza.toppings = [
+  order.toppings = [
     'Cheese',
     'Pepperoni',
     'Canadian Bacon',
@@ -15,9 +15,9 @@ myApp.controller('OrderController', ['DataService', function(DataService){
 
   order.addedToppings = [];
 
-  order.addToPizzaToppings = function (toppings) {
-    order.addedToppings.push(toppings);
-    console.log(toppings);
+  order.addToPizzaToppings = function (topping) {
+    order.addedToppings.push(topping);
+    console.log(topping);
   };
 
   order.clearForm = function(){
