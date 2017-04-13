@@ -12,12 +12,15 @@
 <!-- size -->
     <td>{{pizza.size}}</td>
 <!-- toppings -->
-    <td>{{pizza.toppings}}<td>
+    <td>{{pizza.toppings}}</td>
+      <!-- price -->
+    <td>{{pizza.price}}</td>
   </tr>
   <tfoot>
     <tr>
-      <td colspan="2">Total:</td>
-      <td>--Cost goes here--</td>
+      <td></td>
+      <td class="total">Total:</td>
+      <td>{{confirmation.totalCost | currency:"USD$"}}</td>
     </tr>
   </tfoot>
 </table>

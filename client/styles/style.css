@@ -5,6 +5,19 @@
   min-height: 600px;
 }
 
+h1 {
+  font-family: 'Diplomata SC', cursive;
+}
+
+h2 {
+  font-family: 'Diplomata SC', cursive;
+  margin: auto;
+}
+
+.total {
+  text-align: right;
+}
+
 #container {
   background-color: salmon;
 }
