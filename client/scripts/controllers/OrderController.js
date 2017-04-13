@@ -3,7 +3,7 @@ myApp.controller('OrderController', ['DataService', function(DataService){
   order.orderedPizza = DataService.orderedPizza;
   order.orderPizza = DataService.orderPizza;
 
-  order.orderedPizza.toppings = [
+  order.toppings = [
     'Cheese',
     'Pepperoni',
     'Canadian Bacon',
@@ -12,10 +12,13 @@ myApp.controller('OrderController', ['DataService', function(DataService){
     'Supreme',
   ];
 
+  order.orderedPizza = {
+    toppings : []
+  };
+
   order.clearForm = function(){
     order.orderedPizza.size = '';
-    order.orderedPizza = [
-    ];
+    order.toppings.length = 0;
 };
 
 
