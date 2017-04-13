@@ -3,18 +3,19 @@
   <form>
     <span>Size: </span>
     <select class="form-control" ng-model="order.orderedPizza.size">
-      <option value="small">Small $8</option>
-      <option value="medium">Medium $9</option>
-      <option value="large">Large $10</option>
-      <option value="extraLarge">Extra Large $11</option>
+      <option value="Small">Small $8</option>
+      <option value="Medium">Medium $9</option>
+      <option value="Large">Large $10</option>
+      <option value="Extra Large">Extra Large $11</option>
     </select>
 
     <span>Choose Topping: </span>
 
-    <label ng-repeat = "toppings in order.toppings">
-      <input type="checkbox" checklist-model="order.orderedPizza.toppings" checklist-value="toppings"> {{toppings}}
+
+    <label ng-repeat = "toppings in order.orderedPizza.toppings">
+      <input type="checkbox" checklist-model="order.orderedPizza.toppings" checklist-value="topping"> {{toppings}}
     </label>
 
-    <button ng-click="order.calculatePrice(order.orderedPizza.size); orderPizza(order.orderedPizza); order.clearForm()">Submit</button>
+    <button ng-click="order.calculatePrice(order.orderedPizza.size); order.orderPizza(order.orderedPizza); order.clearForm()">Submit</button>
   </form>
 </div>
