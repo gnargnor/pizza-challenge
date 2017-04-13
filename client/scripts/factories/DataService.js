@@ -24,10 +24,42 @@ myApp.factory('DataService', function(){
     orderedPizzas.orderedArray.splice($index, 1);
   };
 
-  //Not confident this will work...
+  //Working delete function!
   var removePizza = function(thisPizza){
     var index = orderedPizzas.orderedArray.indexOf(thisPizza);
    orderedPizzas.orderedArray.splice(index, 1);
+  };
+
+  //Function to take in pricing information
+  var calculatePrice = function(pizzaSize){
+    switch (pizzaSize) {
+      case "Small":
+        orderedPizza.price = 8;
+        break;
+      case "Medium":
+      orderedPizza.price = 9;
+        break;
+      case "Large":
+      orderedPizza.price = 10;
+        break;
+      case "Extra Large":
+      orderedPizza.price = 11;
+        break;
+      default:
+      orderedPizza.price = 100;
+    }
+    var form = document.forms[0]; // your form element (whatever)
+    var checkedElms = form.querySelectorAll(':checked').length;
+    orderedPizza.price = orderedPizza.price + checkedElms;
+  };
+
+  var totalPrice = 0;
+  var calculateTotal = function(){
+    for (var i = 0; i < confirmedPizzas.confirmedArray.length; i++) {
+      if(confirmedPizzas.confirmedArray[i].price){
+        totalPrice = totalPrice + confirmedPizzas.confirmedArray[i].price;
+      }
+    }
   };
 
 //RETURNS
@@ -35,10 +67,14 @@ myApp.factory('DataService', function(){
     orderedPizza : orderedPizza,
     orderedPizzas : orderedPizzas,
     orderPizza : orderPizza,
+    calculatePrice : calculatePrice,
 
     confirmedPizzas : confirmedPizzas,
     confirmPizza : confirmPizza,
 
-    removePizza : removePizza
+    removePizza : removePizza,
+
+    totalPrice : totalPrice,
+    calculateTotal : calculateTotal
   };
 });
