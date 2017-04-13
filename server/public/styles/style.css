@@ -1,9 +1,15 @@
-.content-container {
+body {
+  background-color: salmon;
+}
+
+.main {
   float: none;
   margin: 0 auto;
   background-color: white;
   min-height: 600px;
 }
+
+
 
 h1 {
   font-family: 'Diplomata SC', cursive;
@@ -17,6 +23,11 @@ h2 {
 .total {
   text-align: right;
 }
+
+/*.main {
+  min-height: 100%;
+  position: ;
+}*/
 
 #container {
   background-color: salmon;

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Papa Chi's Pizza</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Diplomata+SC" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Diplomata+SC" rel="stylesheet">
   <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.css" />
   <link rel="stylesheet" href="styles/style.css" />
 
@@ -13,22 +13,19 @@
   <script type="text/javascript" src="scripts/client.min.js"></script>
 
 </head>
-<body>
+  <body>
   <!-- NAV BAR -->
-  <div class="container-fluid" id="container">
-    <div class = "row">
-      <div class = "col-md-12">
-        <div ng-include="'views/partials/header.html'"></div>
-        <div ng-include="'views/partials/nav.html'"></div>
-      </div>
-    </div>
+    <div class="container" id="container">
 
-    <div class = "row">
-      <div class = "col-md-10 content-container">
+      <div ng-include="'views/partials/header.html'"></div>
+      <div ng-include="'views/partials/nav.html'"></div>
+
+      <div class = "container main">
         <!-- MAIN CONTENT -->
         <main ng-view></main>
-
       </div>
+
+
     </div>
   </body>
-  </html>
+</html>
