@@ -1,4 +1,4 @@
-myApp.factory('DataService', function(){
+myApp.factory('DataService', ['$location', function($location){
   //This will allow the data binding on Order page
   var orderedPizza = {};
   //This will store the pizzas to display to Checkout page
@@ -21,6 +21,7 @@ myApp.factory('DataService', function(){
   //This adds the pizzas to the confirmedArray
   var confirmPizza = function(){
     confirmedPizzas.confirmedArray = orderedPizzas.orderedArray;
+    $location.path('/confirmation');
   };
 
   //Working delete function!
@@ -87,4 +88,4 @@ myApp.factory('DataService', function(){
     totalPrice : totalPrice,
     calculateTotal : calculateTotal
   };
-});
+}]);
