@@ -2,23 +2,6 @@
   <div ng-controller="OrderController">
   <form>
     <span>Size: </span>
-<<<<<<< Updated upstream
-    <select class="form-control" ng-model="pizza.size">
-      <option>Small</option>
-      <option>Medium</option>
-      <option>Large</option>
-      <option>Extra Large</option>
-    </select>
-
-    <span>Choose Topping: </span>
-    <select class="form-control" ng-model="pizza.toppings">
-      <option>Cheese</option>
-      <option>Pepperoni</option>
-      <option>Canadian Bacon</option>
-      <option>Sausage</option>
-      <option>Hawaiian</option>
-      <option>Supreme</option>
-=======
     <select class="form-control" ng-model="order.orderedPizza.size">
       <option value="small">Small</option>
       <option value="medium">Medium $9</option>
@@ -47,9 +30,8 @@
       <label class="checkbox-inline">
       <input type = "checkbox" value = "supreme">Supreme
       </label>
->>>>>>> Stashed changes
     </select>
 
-    <button ng-click="orderPizza(pizza)">Submit</button>
+    <button ng-click="order.calculatePrice(order.orderedPizza.size); orderPizza(order.orderedPizza); order.clearForm()">Submit</button>
   </form>
 </div>
