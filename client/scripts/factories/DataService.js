@@ -32,6 +32,7 @@ myApp.factory('DataService', function(){
 
   //Function to take in pricing information
   var calculatePrice = function(pizzaSize){
+    console.log(pizzaSize);
     switch (pizzaSize) {
       case "Small":
         orderedPizza.price = 8;
@@ -51,6 +52,16 @@ myApp.factory('DataService', function(){
     var form = document.forms[0]; // your form element (whatever)
     var checkedElms = form.querySelectorAll(':checked').length;
     orderedPizza.price = orderedPizza.price + checkedElms;
+    console.log(orderedPizza.price);
+    var unCheck = function()
+    {
+      for (var i = 0; i < form.length; i++)  {
+        if (form[i].checked) {
+          form[i].checked = false;
+        }
+      }
+    };
+    unCheck();
   };
 
   var totalPrice = 0;

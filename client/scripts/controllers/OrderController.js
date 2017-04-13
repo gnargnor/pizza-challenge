@@ -8,15 +8,15 @@ myApp.controller('OrderController', ['DataService', function(DataService){
     'Pepperoni',
     'Canadian Bacon',
     'Sausage',
-    'Hawaiin',
+    'Hawaiian',
     'Supreme',
   ];
 
+
   order.clearForm = function(){
     order.orderedPizza.size = '';
-    order.orderedPizza = [
-    ];
-};
+  };
 
+  order.calculatePrice = DataService.calculatePrice;
 
 }]);
