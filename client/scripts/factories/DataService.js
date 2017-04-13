@@ -9,6 +9,7 @@ myApp.factory('DataService', ['$location', function($location){
   var orderPizza = function(thisPizza){
     var newPizza = angular.copy(thisPizza);
     orderedPizzas.orderedArray.push(newPizza);
+    orderedPizza = {};
   };
 
   //No equivalent to orderedPizza above because we will ng-repeat on Checkout page
@@ -51,7 +52,6 @@ myApp.factory('DataService', ['$location', function($location){
     var form = document.forms[0]; // your form element (whatever)
     var checkedElms = (form.querySelectorAll(':checked').length -1);
     orderedPizza.price = orderedPizza.price + checkedElms;
-    console.log(orderedPizza.price);
     var unCheck = function()
     {
       for (var i = 0; i < form.length; i++)  {
@@ -61,7 +61,6 @@ myApp.factory('DataService', ['$location', function($location){
       }
     };
     unCheck();
-    orderedPizza = {};
   };
 
   var totalPrice = 0;
