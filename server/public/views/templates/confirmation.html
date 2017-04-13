@@ -1,0 +1,24 @@
+<div class="container">
+<h2>Order Confirmed!</h2>
+<table class="table table-striped confirmed">
+  <thead>
+    <tr>
+      <th>Size</th>
+      <th>Toppings</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tr ng-repeat="pizza in confirmation.confirmedPizzas.confirmedArray">
+<!-- size -->
+    <td>{{pizza.size}}</td>
+<!-- toppings -->
+    <td>{{pizza.toppings}}<td>
+  </tr>
+  <tfoot>
+    <tr>
+      <td colspan="2">Total:</td>
+      <td>--Cost goes here--</td>
+    </tr>
+  </tfoot>
+</table>
+</div>
