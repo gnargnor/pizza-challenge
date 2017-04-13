@@ -11,6 +11,11 @@ h1 {
 
 h2 {
   font-family: 'Diplomata SC', cursive;
+  margin: auto;
+}
+
+.total {
+  text-align: right;
 }
 
 #container {

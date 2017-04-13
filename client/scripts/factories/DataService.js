@@ -19,9 +19,8 @@ myApp.factory('DataService', function(){
     confirmedArray : []
   };
   //This adds the pizzas to the confirmedArray
-  var confirmPizza = function(thisPizza, $index){
-    confirmedPizzas.confirmedArray.push(thisPizza);
-    orderedPizzas.orderedArray.splice($index, 1);
+  var confirmPizza = function(){
+    confirmedPizzas.confirmedArray = orderedPizzas.orderedArray;
   };
 
   //Working delete function!
