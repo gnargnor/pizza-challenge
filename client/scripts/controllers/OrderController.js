@@ -5,7 +5,26 @@ myApp.controller('OrderController', ['DataService', function(DataService){
 
   order.clearForm = function(){
     order.orderedPizza.size = '';
-    order.orderedPizza.toppings = '';
+    order.orderedPizza.toppings = [
+      'Cheese',
+      'Pepperoni',
+      'Canadian Bacon',
+      'Sausage',
+      'Hawaiin',
+      'Supreme',
+    ];
+};
+  order.orderedPizza.toppings = [
+    'cheese',
+    'pepperoni',
+    'Canadian Bacon',
+    'Sausage',
+    'Hawaiin',
+    'Supreme',
+  ];
 
-  };
+    order.uncheckAll = function() {
+
+ };
+
 }]);
