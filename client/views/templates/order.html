@@ -32,6 +32,13 @@
       <input type="checkbox" ng-model="order.orderedPizza.toppings.supreme"> Supreme
     </label>
 
-    <button ng-click="order.orderPizza(order.orderedPizza); order.calculatePrice(order.orderedPizza.size); order.clearForm()">Submit</button>
+    <button ng-click="order.orderPizza(order.orderedPizza);
+                      order.calculatePrice(order.orderedPizza.size);
+                      order.clearForm();
+                      order.pizzaConfirmation()">Submit</button>
   </form>
+  <br>
+  <br>
+  <div class="displayConfirmation" ng-show="order.displayPizzaConfirmation">Pizza Added!</div>
+</div>
 </div>
