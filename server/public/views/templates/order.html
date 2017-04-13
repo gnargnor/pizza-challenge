@@ -3,23 +3,39 @@
   <form>
     <span>Size: </span>
     <select class="form-control" ng-model="order.orderedPizza.size">
-      <option>Small</option>
-      <option>Medium</option>
-      <option>Large</option>
-      <option>Extra Large</option>
+      <option value="small">Small $8</option>
+      <option value="medium">Medium $9</option>
+      <option value="large">Large $10</option>
+      <option value="extraLarge">Extra Large $11</option>
     </select>
 
     <span>Choose Topping: </span>
 
-    <select class="form-control" ng-model="order.orderedPizza.toppings">
-      <option>Cheese</option>
-      <option>Pepperoni</option>
-      <option>Canadian Bacon</option>
-      <option>Sausage</option>
-      <option>Hawaiian</option>
-      <option>Supreme</option>
-    </select>
+    <!-- <label class="form-control" ng-model="order.orderedPizza.toppings">
+      <label class="checkbox-inline">
+      <input type = "checkbox" checklist-model="order.orderedPizza.toppings" value = "cheese">Cheese
+      </label>
+      <label class="checkbox-inline">
+      <input type = "checkbox" checklist-model="order.orderedPizza.toppings" value = "pepperoni">Pepperoni
+      </label>
+      <label class="checkbox-inline">
+      <input type = "checkbox" checklist-model="order.orderedPizza.toppings" value = "canadianBacon">Canadian Bacon
+      </label>
+      <label class="checkbox-inline">
+      <input type = "checkbox" checklist-model="order.orderedPizza.toppings"value = "sausage">Sausage
+      </label>
+      <label class="checkbox-inline">
+      <input type = "checkbox" checklist-model="order.orderedPizza.toppings" value = "hawaiian">Hawaiian
+      </label>
+      <label class="checkbox-inline">
+      <input type = "checkbox" checklist-model="order.orderedPizza.toppings" value = "supreme">Supreme
+      </label>
+    </select> -->
 
-    <button ng-click="order.orderPizza(order.orderedPizza); order.clearForm()">Submit</button>
+    <label ng-repeat = "toppings in order.orderedPizza.toppings">
+      <input type="checkbox" checklist-model="order.orderePizza.toppings" checklist-value="topping"> {{toppings}}
+    </label>
+
+    <button ng-click="order.calculatePrice(order.orderedPizza.size); orderPizza(order.orderedPizza); order.clearForm()">Submit</button>
   </form>
 </div>
